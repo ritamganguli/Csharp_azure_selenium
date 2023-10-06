@@ -5,11 +5,6 @@ pool:
   name: Azure Pipelines
   vmImage: 'windows-latest'  # Specify a Windows agent image
 
-demands:
-- msbuild
-- visualstudio
-- vstest
-
 jobs:
 - job: BuildAndTest
   displayName: 'Build and Test'
@@ -34,6 +29,11 @@ jobs:
       cat lt.log
     displayName: 'Bash Script'
 
+- job: StopLambdaTunnel
+  displayName: 'Stop LambdaTest Tunnel'
+  steps:
+  - task: Lambdatest.lambda-azure-pipeline-extention.stopLambdaTunnel-task.stoptunnel@1
+    displayName: 'LambdaTest Stop Tunnel'
 
 - job: BuildAndTestOnWindows
   displayName: 'Build and Test on Windows'
