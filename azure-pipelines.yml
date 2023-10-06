@@ -22,12 +22,6 @@ steps:
    curl -v ts.lambdatest.com/health
    displayName: 'PowerShell Script'
 
-- task: Lambdatest.lambda-azure-pipeline-extention.configuration-task.configuration@1
-  displayName: 'LambdaTest configuration setup'
-  inputs:
-    connection: Tunnel
-    isTunnelActivate: true
-    tunnelOptions: '{ "logFile":"lt.log",  "mitm":true,  "verbose":true }'
 
 - task: NuGetCommand@2
   displayName: 'NuGet restore'
