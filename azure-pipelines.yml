@@ -33,8 +33,6 @@ steps:
    cat lt.log
    displayName: 'Bash Script'
 
-- task: Lambdatest.lambda-azure-pipeline-extention.stopLambdaTunnel-task.stoptunnel@1
-  displayName: 'LambdaTest Stop Tunnel'
 
 - task: VSBuild@1
   displayName: 'Build solution **\*.sln'
