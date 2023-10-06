@@ -28,9 +28,7 @@ steps:
   inputs:
     restoreSolution: '$(Parameters.solution)'
 
-- bash: |
-   # Write your commands here
-   cat lt.log
+
 
 
 - task: VSBuild@1
