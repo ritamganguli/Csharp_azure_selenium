@@ -20,7 +20,7 @@ steps:
 - powershell: |
    # Write your PowerShell commands here.
    curl -v ts.lambdatest.com/health
-   displayName: 'PowerShell Script'
+
 
 
 - task: NuGetCommand@2
@@ -31,7 +31,6 @@ steps:
 - bash: |
    # Write your commands here
    cat lt.log
-   displayName: 'Bash Script'
 
 
 - task: VSBuild@1
